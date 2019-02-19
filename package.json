@@ -1,0 +1,13 @@
+{
+  "name": "chatter",
+  "version": "1.0.0",
+  "main": "index.mjs",
+  "author": "Samuel Seng",
+  "license": "MIT",
+  "dependencies": {
+    "winston": "^3.1.0"
+  },
+  "scripts": {
+      "start:main": "node --experimental-modules index.mjs"
+  }
+}

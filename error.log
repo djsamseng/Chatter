@@ -1,0 +1,3 @@
+{"errno":-2,"code":"ENOENT","syscall":"scandir","path":"~/BB/IBChats/","level":"error"}
+{"message":null,"level":"error"}
+{"errno":-2,"code":"ENOENT","syscall":"scandir","path":"/Users/badsseng1/BB/IBChats/","level":"error","message":"Failed to get IBChat files"}
