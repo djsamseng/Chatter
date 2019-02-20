@@ -5,20 +5,22 @@ import { ChatDataStore } from "./ChatDataStore";
 
 const logger = addLogger("index.mjs");
 
+const brains = {};
 const chatDataStore = new ChatDataStore({
-    FileReader
+    FileReader,
 });
 const environment = new Environment({
-    chatDataStore
+    brains,
+    chatDataStore,
 });
 
-environment.loadTrainingData();
-
-/*readIbChats()
-.then(data => {
-    environment.loadMessages(data);
-});*/
-
+environment.loadTrainingData()
+.then(() => {
+    return environment.tick();
+})
+.then(() => {
+    return environment.tick();
+});
 
 
 

@@ -11,11 +11,12 @@ class ChatDataStore {
     }
 
     load() {
-        this.d_fileReader.readIbChats()
+        return this.d_fileReader.readIbChats()
         .then(data => {
             data.forEach(chatFile => {
                 this.d_files[chatFile.filename] = chatFile.messages;
             });
+            logger.info(this.d_files);
         });
     }
 }
